@@ -1,4 +1,7 @@
 Task::Application.routes.draw do
+
+  resources :people, :houses
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
