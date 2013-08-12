@@ -28,8 +28,8 @@
     <%= f.text_field :mob %>
   </div>
   <div class="field">
-    <%= f.label :house_id %><br />
-    <%= f.text_field :house_id %>
+    <%= f.label :House %><br />
+      <%= f.collection_select(:house_id, House.find(:all), :id, :address, :prompt => true)%>
   </div>
 
   <div class="actions">

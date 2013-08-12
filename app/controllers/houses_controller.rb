@@ -27,11 +27,10 @@ class HousesController < ApplicationController
 
   def update
     @house = House.find(params[:id])
-
-      if @house.update_attributes(params[:house])
-        redirect_to @house, notice: 'House was successfully updated.'
-      else
-        render action: "edit"
+    if @house.update_attributes(params[:house])
+      redirect_to @house, notice: 'House was successfully updated.'
+    else
+      render action: "edit"
     end
   end
 
